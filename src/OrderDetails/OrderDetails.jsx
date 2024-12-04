@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col, Button, Badge } from 'react-bootstrap';
-import Slideshow from '../test';
 import { useNavigate } from 'react-router-dom';
 
 const ProductPage = () => {
@@ -13,7 +12,6 @@ const ProductPage = () => {
         <Col md={6}>
           <Row>
             <Col xs={3} className="d-flex flex-column">
-            <Slideshow/>
 
             </Col>
             <Col xs={9}>
