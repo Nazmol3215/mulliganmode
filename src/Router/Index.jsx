@@ -1,28 +1,32 @@
 
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ProductList from "../Test/Index";
 import ProductDetails from "../ProdacutDetails/Index";
 import Navbar from "../Layout/Nabar";
-import ProductCardsFirst from "../HomePage/Index";
-import SlidAll from "../HomePage/SlidAll";
-import TrendingAndRecommended from "../HomePage/TrendingAndRecommended";
+import Footer from "../Layout/Footer";
+import AllPages from "./AllPages";
+import ProductPage from "../OrderDetails/OrderDetails";
+import OrderComponent from "../OrderDetails/OrderComponent";
+
+
+
 
 function Index() {
   return (
     <>
 <BrowserRouter>
 <Navbar/>
-<SlidAll/>
-<TrendingAndRecommended/>
-<ProductCardsFirst/>
-<ProductList/>
 <Routes>
   <Route path="/ProductDetails" element={<ProductDetails/>}></Route> 
+  <Route path="/" element={<AllPages/>}></Route> 
+  <Route path="/ProductPage" element={<ProductPage/>}></Route> 
+  <Route path="/OrderComponent" element={<OrderComponent/>}></Route> 
 </Routes>
+<Footer/>
 </BrowserRouter>
 
     </>
   )
 }
 export default Index;
+

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./Nabar.css"
+import "./Nabar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigateTo = useNavigate();
+
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -18,7 +21,7 @@ const Navbar = () => {
   return (
     <header className={`navbar ${isSticky ? "sticky" : ""}`}>
       <div className="container">
-        <div className="logo">LOGO</div>
+        <div className="logo" onClick={() => navigateTo("/")}>mullignmode</div>
         <div className="search-box">
           <input type="text" placeholder="Search..." />
           <button>🔍</button>

@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
+
+
+
+
 
 const ProductDetails = () => {
+  const navigateTo = useNavigate();
+
   const [selectedColor, setSelectedColor] = useState("Daisy");
   const [selectedSize, setSelectedSize] = useState("S");
 
@@ -29,9 +36,9 @@ const ProductDetails = () => {
     alert(`Added to cart: Color - ${selectedColor}, Size - ${selectedSize}`);
   };
 
-  const handleBuyNow = () => {
-    alert(`Buying now: Color - ${selectedColor}, Size - ${selectedSize}`);
-  };
+  // const handleBuyNow = () => {
+  //   alert(`Buying now: Color - ${selectedColor}, Size - ${selectedSize}`);
+  // };
 
   const colors = Object.keys(colorImages);
   const sizes = ["S", "M", "L", "XL", "2XL", "3XL"];
@@ -98,8 +105,10 @@ const ProductDetails = () => {
               Add to cart
             </button>
             <button
-              onClick={handleBuyNow}
+              // onClick={handleBuyNow}
               className="btn btn-primary flex-grow-1"
+              onClick={() => navigateTo("/OrderComponent")}
+              
             >
               Buy it now
             </button>

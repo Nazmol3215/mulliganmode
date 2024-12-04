@@ -1,15 +1,10 @@
 
 
 import Index from "./Router/Index";
-
-
-
 function App() {
 
   return (
     <> 
-
-
 <Index/>
 
 
@@ -18,3 +13,5 @@ function App() {
 }
 
 export default App;
+
+

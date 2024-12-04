@@ -7,7 +7,7 @@ import gfh4 from "../Images/9.png";
 
 
 
-const ProductCard = ({ image, code, price, description }) => (
+const ProductCard = ({ image, code, price, description, onOrderClick }) => (
   <div className="col-md-4 col-X-Small-6 col-lg-3">
     <div className="card" style={styles.card}>
       <img src={image} alt={`Product ${code}`} className="card-img-top" style={styles.img} />
@@ -15,7 +15,19 @@ const ProductCard = ({ image, code, price, description }) => (
         <p className="product-code">Code: {code}</p>
         <p className="price" style={styles.price}>৳ {price}</p>
         <p>{description}</p>
-        <button className="btn btn-order" style={styles.btnOrder}>Order Now</button>
+        <button
+          className="btn btn-order"
+          style={styles.btnOrder}
+          onClick={() => onOrderClick(code, price)}
+        >
+          Order Now
+        </button>
+        <button
+          className="btn btn-order"
+          style={styles.btnOrder}
+        >
+By Now hf
+        </button>
       </div>
     </div>
   </div>
@@ -25,10 +37,13 @@ const ProductCardsFirst = () => {
   const products = [
     { image: gfh, code: 469, price: 1180, description: "সাদা কালার - কোড: ৪৬৯" },
     { image: gfh1, code: 457, price: 1460, description: "ডার্ক  কালার - কোড: ৪৫৭" },
-    { image:gfh3, code: 471, price: 1150, description: "মান্টি কালার - কোড: ৪৭১" },
+    { image: gfh3, code: 471, price: 1150, description: "মান্টি কালার - কোড: ৪৭১" },
     { image: gfh4, code: 719, price: 1380, description: "ডার্ক কালার - কোড: ৭১৯" },
   ];
 
+  const handleOrderClick = (code, price) => {
+    alert(`You have selected product with code: ${code}, price: ৳${price}`);
+  };
   return (
     <div className="container my-5">
       <div className="row g-4">
@@ -39,6 +54,7 @@ const ProductCardsFirst = () => {
             code={product.code}
             price={product.price}
             description={product.description}
+            onOrderClick={handleOrderClick}
           />
         ))}
       </div>
