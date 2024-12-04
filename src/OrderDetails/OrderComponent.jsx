@@ -66,7 +66,7 @@ const OrderComponent = () => {
                 <div className="col-md-4 mb-4">
                     <div className="order-summary p-3 border rounded">
                         <h3>Your order</h3>
-                        <p>Product: Lumbar Support Pillow × <span>{quantity}</span></p>
+                        <p>Product: Lumbar Pillow × <span>{quantity}</span></p>
                         <p>Subtotal: ৳ <span>{subtotal}</span></p>
                         <p>Shipping: <strong>ডেলিভারি চার্জ ফ্রি</strong></p>
                         <p>Total: ৳ <span>{subtotal}</span></p>
