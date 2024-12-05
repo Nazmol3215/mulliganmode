@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-
 const OrderComponent = () => {
     const unitPrice = 999; // price per pillow
     const [quantity, setQuantity] = useState(3);
@@ -19,11 +16,14 @@ const OrderComponent = () => {
     };
 
     return (
-        <div className="container my-4">
+        <div className="container my-4" style={{ backgroundColor: "#f8f9fa", padding: "1rem", borderRadius: "0.5rem" }}>
             <div className="row">
                 {/* Product Summary */}
                 <div className="col-md-4 mb-4">
-                    <div className="product-summary p-3 border rounded">
+                    <div
+                        className="product-summary p-3 border rounded"
+                        style={{ backgroundColor: "#EEF0F4", borderColor: "#90caf9" }}
+                    >
                         <h3>
                             Lumbar Support Pillow × <span>{quantity}</span>
                         </h3>
@@ -43,7 +43,10 @@ const OrderComponent = () => {
                 </div>
                 {/* Billing Details */}
                 <div className="col-md-4 mb-4">
-                    <div className="billing-details p-3 border rounded">
+                    <div
+                        className="billing-details p-3 border rounded"
+                        style={{ backgroundColor: "#EEF0F4", borderColor: "#ffcc80" }}
+                    >
                         <h3>Billing details</h3>
                         <form>
                             <label className="form-label">আপনার নাম লিখুন *</label>
@@ -53,10 +56,19 @@ const OrderComponent = () => {
                             <input type="text" className="form-control mb-3" placeholder="মোবাইল নাম্বার" required />
 
                             <label className="form-label">আপনার ঠিকানা লিখুন *</label>
-                            <input type="text" className="form-control mb-3" placeholder="বাসা নং, রোড নং, থানা, জেলা" required />
+                            <input
+                                type="text"
+                                className="form-control mb-3"
+                                placeholder="বাসা নং, রোড নং, থানা, জেলা"
+                                required
+                            />
 
-                            <button type="submit" className="btn btn-warning w-100">
-                                Place Order ৳ <span>{subtotal}</span>
+                            <button
+                                type="submit"
+                                className="btn w-100"
+                                style={{ backgroundColor: "#F3F3F3", border:"1px solid Black"}} // Warning কালারের জন্য উপযুক্ত HEX কোড
+                            >
+                                Submit
                             </button>
                         </form>
                     </div>
@@ -64,7 +76,10 @@ const OrderComponent = () => {
 
                 {/* Order Summary */}
                 <div className="col-md-4 mb-4">
-                    <div className="order-summary p-3 border rounded">
+                    <div
+                        className="order-summary p-3 border rounded"
+                        style={{ backgroundColor: "#e8f5e9", borderColor: "#a5d6a7" }}
+                    >
                         <h3>Your order</h3>
                         <p>Product: Lumbar Pillow × <span>{quantity}</span></p>
                         <p>Subtotal: ৳ <span>{subtotal}</span></p>
@@ -79,4 +94,3 @@ const OrderComponent = () => {
 };
 
 export default OrderComponent;
-

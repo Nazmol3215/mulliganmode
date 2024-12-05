@@ -1,6 +1,13 @@
 import React, { useState } from "react";
+import picture from "../Images/9.png";
+import picture1 from "../Images/5.png";
+
+
+
+
 
 const ProductCard = ({ product }) => {
+
   // কুইক ভিউ মডালের জন্য স্টেট
   const [showModal, setShowModal] = useState(false);
 
@@ -23,7 +30,7 @@ const ProductCard = ({ product }) => {
         onClick={openModal}
       >
         <img
-          src={`https://via.placeholder.com/150`}
+          src={picture1}
           alt={product.name}
           style={{ width: "100%" }}
         />
@@ -59,7 +66,7 @@ const ProductCard = ({ product }) => {
             {/* মডাল কন্টেন্ট */}
             <h3>{product.name}</h3>
             <img
-              src={`https://via.placeholder.com/350`}
+              src={picture}
               alt={product.name}
               style={{ width: "100%", marginBottom: "20px" }}
             />
@@ -88,7 +95,9 @@ const ProductCard = ({ product }) => {
 
 const FirstAll = () => {
   const products = [
+    
     {
+      
       name: "T-shirt",
       price: 500,
       description: "A comfortable cotton t-shirt.",
@@ -103,9 +112,25 @@ const FirstAll = () => {
       price: 1500,
       description: "Warm winter jacket for cold days.",
     },
+    {
+      name: "Jacket",
+      price: 1500,
+      description: "Warm winter jacket for cold days.",
+    },
+    {
+      name: "Jacket",
+      price: 1500,
+      description: "Warm winter jacket for cold days.",
+    },
+    {
+      name: "Jacket",
+      price: 1500,
+      description: "Warm winter jacket for cold days.",
+    },
   ];
 
   return (
+    
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       {products.map((product) => (
         <ProductCard key={product.name} product={product} />

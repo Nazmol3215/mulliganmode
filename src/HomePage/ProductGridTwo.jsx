@@ -1,12 +1,18 @@
 import React from "react";
 import "./ProductGrid.css";
+import picture1 from "../Images/1.webp";
+import picture2 from "../Images/0.png";
+import picture3 from "../Images/3.png";
+import picture4 from "../Images/4.png";
+import picture5 from "../Images/5.webp";
 
 const ProductGridTwo = () => {
   const products = [
-    { id: 1, name: "Red Shirt", price: "$20", image: "https://via.placeholder.com/150" },
-    { id: 2, name: "Blue Jeans", price: "$40", image: "https://via.placeholder.com/150" },
-    { id: 3, name: "Wireless Mouse", price: "$15", image: "https://via.placeholder.com/150" },
-    { id: 4, name: "Smartphone", price: "$300", image: "https://via.placeholder.com/150" },
+    { id: 1, name: "The Dark Side Unisex Softstyle T-Shirt", price: "$20", image: picture1},
+    { id: 3, name: "Putt, I Must Unisex Softstyle T-Shirt", price: "$15", image: picture2},
+    { id: 3, name: "Never Hit A Shot Unisex Softstyle T-Shirt", price: "$15", image: picture3 },
+    { id: 4, name: "May The Course Be With You Unisex Softstyle T-Shirt", price: "$300", image: picture4 },
+    { id: 4, name: "The Dark Side Unisex Softstyle T-Shirt", price: "$300", image: picture5 },
   ];
 
   return (
@@ -19,8 +25,8 @@ const ProductGridTwo = () => {
             <p>{product.price}</p>
           </div>
           <div className="hover-buttons">
-            <button className="cart-button">Add to Cart</button>
-            <button className="wishlist-button">Wishlist</button>
+            <button className="cart-button">Add Cart</button>
+            <button className="wishlist-button">Add Wishlist</button>
           </div>
         </div>
       ))}

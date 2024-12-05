@@ -34,7 +34,7 @@
   /* Product Card Styles */
   .product-card {
     flex: 0 0 auto;
-    width: 150px;
+    width: 140px;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -72,3 +72,17 @@
     color: #666;
   }
   
+
+
+  .bay_now{
+    color:#333;
+    width: 100%;
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+
+}
+
+

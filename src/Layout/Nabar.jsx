@@ -3,7 +3,7 @@ import "./Nabar.css";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigateTo = useNavigate();
+  const navigate = useNavigate();
 
   const [isSticky, setIsSticky] = useState(false);
 
@@ -21,12 +21,12 @@ const Navbar = () => {
   return (
     <header className={`navbar ${isSticky ? "sticky" : ""}`}>
       <div className="container">
-        <div className="logo" onClick={() => navigateTo("/")}>mullignmode</div>
+        <div className="logo" onClick={() => navigate("/")} >mullignmode</div>
         <div className="search-box">
           <input type="text" placeholder="Search..." />
           <button>🔍</button>
         </div>
-        <div className="cart-icon">🛒</div>
+        <div onClick={() => navigate("/OrderComponent")} className="cart-icon">🛒</div>
       </div>
     </header>
   );
