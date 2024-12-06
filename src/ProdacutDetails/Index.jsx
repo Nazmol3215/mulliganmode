@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
+import FAQ from "../HomePage/Faq";
 import picture from "../Images/776.png";
 import picture1 from "../Images/6.png";
 import picture2 from "../Images/776.png";
@@ -176,7 +177,6 @@ const ProductDetails = () => {
               onClick={() => navigateTo("/OrderComponent")}
               style={{
                 flexGrow: 1,
-                padding: "0.75rem 1rem",
                 backgroundColor: "#007bff",
                 color: "#fff",
                 border: "none",
@@ -187,6 +187,7 @@ const ProductDetails = () => {
               Buy it now
             </button>
           </div>
+            <FAQ/>
         </div>
       </div>
     </div>
